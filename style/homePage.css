@@ -1,0 +1,79 @@
+header{
+    background:#e8373b;
+    height:0.88rem;
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+header input{
+    float:left;
+    width:5.2rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    font-size: 0.24rem;
+    color:#9d9d9d;
+    margin-left: 0.75rem;
+    padding-left: 0.8rem;
+    background:#fff url(../images/homePage/bigger.png) no-repeat 0.36rem center ;
+    background-size: 0.25rem 0.25rem;
+    border-radius: 0.6rem;
+    margin-top:0.14rem;
+}
+header img{
+    float: right;
+    margin-right: 0.2rem;
+    margin-top:0.32rem;
+    width:0.25rem;
+    height: 0.25rem;
+}
+.content{
+    margin-top: 0.88rem;
+}
+.flexslider {
+    margin: 0px auto;
+    position: relative;
+    width: 100%;
+    height: 2.8rem;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.flexslider .slides li {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom:0rem;
+    text-align: center;
+    font-size: 0.25rem;
+}
+
+.flex-control-nav li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.flex-control-paging li a {
+    background: url(../images/homePage/dot.png) no-repeat 0 -0.25rem;
+    background-size:0.25rem 0.5rem ;
+    display: block;
+    height: 0.25rem;
+    overflow: hidden;
+    text-indent: -99em;
+    width: 0.25rem;
+    cursor: pointer;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+    background-position: 0 0;
+}
+
+.flexslider .slides a img {
+    width: 100%;
+    display: block;
+}

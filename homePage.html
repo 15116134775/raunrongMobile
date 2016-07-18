@@ -11,6 +11,82 @@
     <title>首页</title>
 </head>
 <body>
+    <header class="fix">
+        <input type="text"  name="q" id="search" placeholder="请输入文字"/>
+        <img src="images/homePage/ring.png">
+    </header>
+    <div class="content">
+        <div id="banner_tabs" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <a title="" target="_blank" href="#">
+                        <img alt="" style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png">
+                    </a>
+                </li>
+                <li>
+                    <a title="" href="#">
+                        <img alt="" style="background: url(images/homePage/thing1.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/thing1.png">
+                    </a>
+                </li>
+                <li>
+                    <a title="" href="#">
+                        <img style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png">
+                    </a>
+                </li>
+                <li>
+                    <a title="" href="#">
+                        <img style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png">
+                    </a>
+                </li>
+            </ul>
+            <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+                <li class="active"><a>1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+            </ol>
+        </div>
+    </div>
+    <footer>
 
+    </footer>
+    <script src="js/slider.js"></script>
+    <script src="js/touch-0.2.11-min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var bannerSlider = new Slider($('#banner_tabs'), {
+                time: 5000,
+                delay: 400,
+                event: 'hover',
+                auto: true,
+                mode: 'fade',
+                controller: $('#bannerCtrl'),
+                activeControllerCls: 'active'
+            });
+            $('#banner_tabs .flex-prev').click(function() {
+                bannerSlider.prev()
+            });
+            $('#banner_tabs .flex-next').click(function() {
+                bannerSlider.next()
+            });
+//            touch.config(
+//                    {
+//                        tap: true,                  //tap类事件开关, 默认为true
+//                        doubleTap: true,            //doubleTap事件开关， 默认为true
+//                        hold: true,                 //hold事件开关, 默认为true
+//                        holdTime: 650,              //hold时间长度
+//                        swipe: true,                //swipe事件开关
+//                        swipeTime: 300,             //触发swipe事件的最大时长
+//                        swipeMinDistance: 18,       //swipe移动最小距离
+//                        swipeFactor: 5,             //加速因子, 值越大变化速率越快
+//                        drag: true,                 //drag事件开关
+//                        pinch: true,                //pinch类事件开关
+//                    }
+//            );
+            touch.on('.slide li', 'swipeleft', function(ev){
+                console.log(123);
+            });
+        })
+    </script>
 </body>
 </html>

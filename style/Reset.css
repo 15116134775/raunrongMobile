@@ -27,7 +27,6 @@ ul, ol { list-style: none; }
 a { text-decoration: none;     margin:0;
     padding:0;
     border:0;
-    font-size:100%;
     vertical-align:baseline;
     background:transparent;}
 a:hover { text-decoration: underline; }
@@ -43,9 +42,6 @@ q:before, q:after { content: ''; }
 legend { color: #000; } /* for ie6 */
 fieldset, img { border: none; } /* img ������������ img �ޱ߿� */
 /* ע��optgroup �޷����� */
-button, input, select, textarea {
-    font-size: 100%; /* ʹ�ñ?Ԫ���� ie ���ܼ̳������С */
-}
 /* ���ñ��Ԫ�� */
 table {
     border-collapse: collapse;
@@ -55,4 +51,7 @@ table {
 hr {
     border: none;
     height: 1px;
+}
+input{
+    border:none;
 }
