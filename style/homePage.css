@@ -72,8 +72,18 @@ header img{
 .flex-control-paging li.active a {
     background-position: 0 0;
 }
-
 .flexslider .slides a img {
     width: 100%;
     display: block;
 }
+.item ul li img{
+    width:0.85rem;
+    height: 0.85rem;
+}
+.item ul{
+    padding:0.3rem 0.4rem 0.2rem 0.4rem;
+}.item ul li a span{
+    color:#9d9d9d;
+    line-height: 0.24rem;
+    margin-top:0.2rem;
+ }

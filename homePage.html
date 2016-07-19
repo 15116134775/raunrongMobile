@@ -20,22 +20,22 @@
             <ul class="slides">
                 <li>
                     <a title="" target="_blank" href="#">
-                        <img alt="" style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png">
+                        <img alt="" style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png" class="bannerSlider">
                     </a>
                 </li>
                 <li>
                     <a title="" href="#">
-                        <img alt="" style="background: url(images/homePage/thing1.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/thing1.png">
+                        <img alt="" style="background: url(images/homePage/thing1.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/thing1.png" class="bannerSlider">
                     </a>
                 </li>
                 <li>
                     <a title="" href="#">
-                        <img style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png">
+                        <img style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png" class="bannerSlider">
                     </a>
                 </li>
                 <li>
                     <a title="" href="#">
-                        <img style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png">
+                        <img style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png" class="bannerSlider">
                     </a>
                 </li>
             </ul>
@@ -45,6 +45,60 @@
                 <li><a>3</a></li>
                 <li><a>4</a></li>
             </ol>
+        </div>
+        <div class="item">
+            <ul class="df jcsb">
+                <li>
+                    <a class="df fdc aic">
+                        <img src="images/homePage/icon1.png" alt="">
+                        <span class="f24">企业服务</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="df fdc aic">
+                        <img src="images/homePage/icon2.png" alt="">
+                        <span class="f24">微信应用</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="df fdc aic">
+                        <img src="images/homePage/icon3.png" alt="">
+                        <span class="f24">平台搭建</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="df fdc aic">
+                        <img src="images/homePage/icon4.png" alt="">
+                        <span class="f24">APP开发</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="df jcsb">
+                <li>
+                    <a class="df fdc aic">
+                        <img src="images/homePage/icon5.png" alt="">
+                        <span class="f24">新奇特色</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="df fdc aic">
+                        <img src="images/homePage/icon6.png" alt="">
+                        <span class="f24">营销工具</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="df fdc aic">
+                        <img src="images/homePage/icon7.png" alt="">
+                        <span class="f24">娱乐游戏</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="df fdc aic">
+                        <img src="images/homePage/icon8.png" alt="">
+                        <span class="f24">智能硬件</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
     <footer>
@@ -63,12 +117,6 @@
                 controller: $('#bannerCtrl'),
                 activeControllerCls: 'active'
             });
-            $('#banner_tabs .flex-prev').click(function() {
-                bannerSlider.prev()
-            });
-            $('#banner_tabs .flex-next').click(function() {
-                bannerSlider.next()
-            });
 //            touch.config(
 //                    {
 //                        tap: true,                  //tap类事件开关, 默认为true
@@ -83,8 +131,11 @@
 //                        pinch: true,                //pinch类事件开关
 //                    }
 //            );
-            touch.on('.slide li', 'swipeleft', function(ev){
-                console.log(123);
+            touch.on('.bannerSlider', 'swipeleft', function(ev){
+                bannerSlider.next();
+            });
+            touch.on('.bannerSlider', 'swiperight', function(ev){
+                bannerSlider.prev();
             });
         })
     </script>

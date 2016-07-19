@@ -28,8 +28,10 @@ a { text-decoration: none;     margin:0;
     padding:0;
     border:0;
     vertical-align:baseline;
-    background:transparent;}
-a:hover { text-decoration: underline; }
+    background:transparent;
+    cursor: pointer;
+}
+a:hover { text-decoration: none; }
 
 abbr[title], acronym[title] { /* ע��1.ie6 ��֧�� abbr; 2.������������ѡ���ie6 ����Ч�� */
     border-bottom: 1px dotted;
