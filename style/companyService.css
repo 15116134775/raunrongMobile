@@ -1,0 +1,209 @@
+body{
+    padding-top:0.88rem ;
+}
+header{
+    width:100%;
+    box-sizing: border-box;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    padding:0 0.3rem;
+    font-size: 0.32rem;
+    color:#6a6a6a;
+    background: #fff;
+    position: fixed;
+    top:0;
+    z-index: 99;
+    border-bottom: 1px solid #eee;
+}
+header a:first-child{
+    display: inline-block;
+    float: left;
+    width: 0.22rem;
+    height: 0.42rem;
+    background: url(../images/companyService/back.png) no-repeat center center;
+    background-size:0.22rem 0.42rem ;
+}
+header a:last-child{
+    display: inline-block;
+    float: right;
+    width: 0.32rem;
+    height: 0.42rem;
+    background: url(../images/companyService/message.png) no-repeat center center;
+    background-size: 0.32rem 0.42rem;
+}
+header a{
+    margin:0.24rem 0;
+}
+nav>ul{
+    padding:0.1rem 0;
+}
+nav>ul>li{
+    font-size: 0;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    line-height: 0.6rem;
+    position: relative;
+}
+nav>ul>li>span{
+    color:#504c4a;
+    font-size: 0.26rem;
+    padding-right: 0.5rem;
+    background: url(../images/companyService/down.png) no-repeat right center;
+    background-size: 0.2rem 0.12rem;
+}
+.activeOne{
+    color:#e8373b;
+    background-image:url(../images/companyService/down1.png) ;
+}
+.activeTwo{
+    color:#e8373b;
+    background-image:url(../images/companyService/up1.png) ;
+}
+
+#industry ul{
+    position: absolute;
+    z-index: 100;
+    margin-top: 0.1rem;
+}
+#industry ul li{
+    font-size: 0.26rem;
+    color:#6a6A6A;
+    width:7.48rem;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding:0 0.4rem;
+    line-height: 0.8rem;
+    box-sizing: border-box;
+}
+.secondActive{
+    color:#e8373b;
+}
+#industry ul li:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#industry ul li span:first-child{
+    float:left;
+}
+#industry ul li span:last-child{
+    float: right;
+}
+.firstActive{
+    background: url(../images/companyService/nike.png) no-repeat center center;
+    width:0.5rem;
+    height: 0.38rem;
+    background-size:0.5rem 0.38rem ;
+    margin-top:0.2rem;
+}
+#stage ul{
+    position: absolute;
+    z-index: 100;
+    margin-top: 0.1rem;
+    left:-2.5rem;
+}
+#stage ul li{
+    font-size: 0.26rem;
+    color:#6a6A6A;
+    width:7.48rem;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding:0 0.4rem;
+    line-height: 0.8rem;
+    box-sizing: border-box;
+}
+#stage ul li:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#stage ul li span:first-child{
+    float:left;
+}
+#stage ul li span:last-child{
+    float: right;
+}
+#price ul{
+    position: absolute;
+    z-index: 100;
+    margin-top: 0.1rem;
+    left:-5rem;
+}
+#price ul li{
+    font-size: 0.26rem;
+    color:#6a6A6A;
+    width:7.48rem;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding:0 0.4rem;
+    line-height: 0.8rem;
+    box-sizing: border-box;
+}
+#price ul li:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#price ul li span:first-child{
+    float:left;
+}
+#price ul li span:last-child{
+    float: right;
+}
+
+#content li{
+    float: left;
+    padding:0.23rem;
+    border-top: 0.04rem solid #eee;
+    position: relative;
+}
+#content li:nth-of-type(odd){
+    border-right:0.02rem solid #eee;
+}
+#content li:nth-of-type(even){
+    border-left:0.02rem solid #eee;
+}
+#content li img{
+    display: block;
+    width:3.25rem;
+    height: 2.18rem;
+}
+body>ul li>span{
+    background: #6a6a6a;
+    color: #fff;
+    font-size: 0.18rem;
+    line-height: 0.24rem;
+    display: inline-block;
+    /*width: 0.2rem;*/
+    position: absolute;
+    right: 0.3rem;
+    top:0.15rem;
+    z-index: 1;
+}
+.stopsale{
+    background: #30cb12;
+}
+#content li p:nth-of-type(1){
+    color:#313131;
+    font-size: 0.22rem;
+    line-height:0.22rem ;
+    margin-top: 0.2rem;
+}
+#content  li p:last-child{
+    color:#e8373b;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    margin-top:0.2rem;
+}
+#content  li p:last-child span{
+    font-size: 0.18rem;
+    color:#b5b5b5;
+    text-decoration: line-through;
+    padding-left: 0.6rem;
+}
