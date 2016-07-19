@@ -1,9 +1,13 @@
+body{
+    padding-bottom: 1rem;
+}
 header{
     background:#e8373b;
     height:0.88rem;
     position: fixed;
     width: 100%;
     top:0;
+    z-index: 99;
 }
 header input{
     float:left;
@@ -76,6 +80,9 @@ header img{
     width: 100%;
     display: block;
 }
+.item{
+    border-bottom: 0.1rem solid #eee;
+}
 .item ul li img{
     width:0.85rem;
     height: 0.85rem;
@@ -87,3 +94,58 @@ header img{
     line-height: 0.24rem;
     margin-top:0.2rem;
  }
+ .sectionTop{
+     font-size: 0.26rem;
+     color:#6a6a6a;
+     line-height: 0.8rem;
+     font-weight: normal;
+     padding-left: 0.2rem;
+     border-bottom: 0.04rem solid #eee;
+ }
+ #product li{
+     float: left;
+     margin:0.25rem 0.24rem;
+ }
+#product li img{
+    display: block;
+    width:3.25rem;
+    height: 2.18rem;
+}
+#product li p:nth-of-type(1){
+    font-size: 0.22rem;
+    color:#313131;
+    margin-top: 0.18rem;
+}
+#product li p:last-child{
+    font-size: 0.24rem;
+    color: #e8373b;
+    margin-top: 0.14rem;
+}
+#product li p:last-child span{
+    font-size: 0.18rem;
+    color:#b5b5b5;
+    text-decoration: line-through;
+    padding-left: 0.16rem;
+}
+footer{
+    width: 100%;
+    height: 0.98rem;
+    border-top: 1px solid #eee;
+    position: fixed;
+    overflow: hidden;
+    bottom:0;
+    background: #fff;
+}
+footer ul{
+    padding:0.1rem 0.3rem;
+}
+footer ul li img{
+    width:0.45rem;
+    height: 0.45rem;
+    display: block;
+}
+footer ul li p{
+    font-size: 0.22rem;
+    margin-top:0.04rem;
+    color:#6a6a6a;
+}

@@ -100,9 +100,47 @@
                 </li>
             </ul>
         </div>
+        <h1 class="sectionTop">推荐</h1>
+        <ul id="product" class="fix">
+            <!--<li>-->
+                <!--<img src="images/homePage/thing1.png" >-->
+                <!--<p>新能源开发</p>-->
+                <!--<p>预售¥11000<span>原价¥19000</span></p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="images/homePage/thing1.png" >-->
+                <!--<p>新能源开发</p>-->
+                <!--<p>预售¥11000<span>原价¥19000</span></p>-->
+            <!--</li>-->
+        </ul>
     </div>
     <footer>
-
+        <ul class="df jcsb">
+            <li >
+                <a href="#" class="df fdc aic">
+                    <img src="images/homePage/footer1.png">
+                    <p style="color:#e8373b">产品服务</p>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="df fdc aic">
+                    <img src="images/homePage/footer2.png">
+                    <p >解决方案</p>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="df fdc aic">
+                    <img src="images/homePage/footer3.png">
+                    <p >创客空间</p>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="df fdc aic">
+                    <img src="images/homePage/footer4.png">
+                    <p >我的</p>
+                </a>
+            </li>
+        </ul>
     </footer>
     <script src="js/slider.js"></script>
     <script src="js/touch-0.2.11-min.js"></script>
@@ -136,6 +174,14 @@
             });
             touch.on('.bannerSlider', 'swiperight', function(ev){
                 bannerSlider.prev();
+            });
+            $.get("json/homePage.json",function(data){
+                var list="";
+                for(var i=0;i<data.length;i++){
+                    var li="<li>"+"<img src="+data[i].src+">"+"<p>"+data[i].name+"</p>"+"<p>"+data[i].price+"<span>"+data[i].oprice+"</span></p></li>";
+                    list+=li;
+                }
+               $("#product").html(list);
             });
         })
     </script>
