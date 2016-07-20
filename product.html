@@ -14,58 +14,47 @@
     <header class="df jcsb aic">
         <span id="back" class=""></span>
         <div class="">
-            <span class="mr20 topActive">商品</span>
-            <span class="">详情</span>
+            <span class="mr20 topActive" id="thing">商品</span>
+            <span class="" id="detail">详情</span>
         </div>
         <div class="">
             <span></span>
             <span></span>
         </div>
     </header>
-    <div class="banner">
-        <img src="images/product/banner.png" alt="" class="pct100"/>
-        <p class="bannerFirst">餐饮流行推荐制作<span id="state" class="wh f28 ml20"></span></p>
-        <p class="bannerSecond">¥<span>12221</span><span>原价¥19000</span></p>
-    </div>
-    <div id="comment">
-        <h1 class="f30 n">宝贝评价（<span id="commentCount">2322</span>）</h1>
-        <ul id="commentFirst" class="comment">
-            <!--<li>-->
-                <!--<p><img src="images/product/icon.png" alt="">小鱼爱上</p>-->
-                <!--<p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>-->
-                <!--<div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<p><img src="images/product/icon.png" alt="">小鱼爱上</p>-->
-                <!--<p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>-->
-                <!--<div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>-->
-            <!--</li>-->
-        </ul>
-        <ul id="commentSecond" class="comment" style="display: none;">
-            <li>
-                <p><img src="images/product/icon.png" alt="">小鱼爱上</p>
-                <p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>
-                <div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>
-            </li>
-            <li>
-                <p><img src="images/product/icon.png" alt="">小鱼爱上</p>
-                <p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>
-                <div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>
-            </li>
-        </ul>
-        <p id="more">更多</p>
-    </div>
-    <footer class="df">
-        <div class="f30">
-            <span class="footerActive footerSpan"><br><br>客服</span>
-            <span class="footerSpan"><br><br>收藏</span>
+        <div class="banner">
+            <img src="images/product/banner.png" alt="" class="pct100"/>
+            <p class="bannerFirst">餐饮流行推荐制作<span id="state" class="wh f28 ml20"></span></p>
+            <p class="bannerSecond">¥<span>12221</span><span>原价¥19000</span></p>
         </div>
-        <div class=" fx1 df ">
-            <span class="f32 fx1">我要定制</span>
-            <span class="f32 fx1">立即购买</span>
+    <div id="second" style="display: none;">
+        <img src="images/product/detail.png" alt="" style="width:100%;height: 18.5rem;position: absolute;margin-top:-1.6rem;">
+    </div>
+    <div id="first">
+        <div id="comment">
+            <h1 class="f30 n">宝贝评价（<span id="commentCount">2322</span>）</h1>
+            <ul id="commentFirst" class="comment">
+                <!--<li>-->
+                    <!--<p><img src="images/product/icon.png" alt="">小鱼爱上</p>-->
+                    <!--<p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>-->
+                    <!--<div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>-->
+                <!--</li>-->
+            </ul>
+            <ul id="commentSecond" class="comment" style="display: none;">
+            </ul>
+            <p id="more">更多</p>
         </div>
-    </footer>
-
+        <footer class="df">
+            <div class="f30">
+                <span class="footerActive footerSpan"><br><br>客服</span>
+                <span class="footerSpan"><br><br>收藏</span>
+            </div>
+            <div class=" fx1 df ">
+                <span class="f32 fx1">我要定制</span>
+                <span class="f32 fx1" id="buy">立即购买</span>
+            </div>
+        </footer>
+    </div>
 <script>
     $(function(){
         $("#back").click(function(){
@@ -101,9 +90,31 @@
                     }
                 }
         );
-        if(){
-
-        }else if(){}else
+        if($("#state").text()=="停售"){
+            $("#state").addClass("bannerActive");
+            $("#buy").text("已经停售");
+            $("#buy").css("background","#626262");
+        }else if($("#state").text()=="预售"){
+            $("#state").addClass("bannerActive2");
+            $("#buy").text("立即预售");
+            $("#buy").css("background","#30cb12");
+        }
+        $("#thing").click(function(){
+            if(!$(this).hasClass("topActive")){
+                $(this).addClass("topActive");
+            }
+            $("#detail").removeClass("topActive");
+            $("#first").css("display","block");
+            $("#second").css("display","none");
+        });
+        $("#detail").click(function(){
+            if(!$(this).hasClass("topActive")){
+                $(this).addClass("topActive");
+            }
+            $("#thing").removeClass("topActive");
+            $("#second").css("display","block");
+            $("#first").css("display","none");
+        });
     });
 </script>
 </body>
