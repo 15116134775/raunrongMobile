@@ -11,6 +11,100 @@
     <title>商品</title>
 </head>
 <body>
+    <header class="df jcsb aic">
+        <span id="back" class=""></span>
+        <div class="">
+            <span class="mr20 topActive">商品</span>
+            <span class="">详情</span>
+        </div>
+        <div class="">
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="images/product/banner.png" alt="" class="pct100"/>
+        <p class="bannerFirst">餐饮流行推荐制作<span id="state" class="wh f28 ml20"></span></p>
+        <p class="bannerSecond">¥<span>12221</span><span>原价¥19000</span></p>
+    </div>
+    <div id="comment">
+        <h1 class="f30 n">宝贝评价（<span id="commentCount">2322</span>）</h1>
+        <ul id="commentFirst" class="comment">
+            <!--<li>-->
+                <!--<p><img src="images/product/icon.png" alt="">小鱼爱上</p>-->
+                <!--<p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>-->
+                <!--<div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p><img src="images/product/icon.png" alt="">小鱼爱上</p>-->
+                <!--<p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>-->
+                <!--<div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>-->
+            <!--</li>-->
+        </ul>
+        <ul id="commentSecond" class="comment" style="display: none;">
+            <li>
+                <p><img src="images/product/icon.png" alt="">小鱼爱上</p>
+                <p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>
+                <div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>
+            </li>
+            <li>
+                <p><img src="images/product/icon.png" alt="">小鱼爱上</p>
+                <p>非常精美，非常漂亮，用的舒心，用的舒适，在合适不过了，小伙伴们速速从购吧。</p>
+                <div><time>2016-9-18</time>分类:<span>互联网科技+医药</span></div>
+            </li>
+        </ul>
+        <p id="more">更多</p>
+    </div>
+    <footer class="df">
+        <div class="f30">
+            <span class="footerActive footerSpan"><br><br>客服</span>
+            <span class="footerSpan"><br><br>收藏</span>
+        </div>
+        <div class=" fx1 df ">
+            <span class="f32 fx1">我要定制</span>
+            <span class="f32 fx1">立即购买</span>
+        </div>
+    </footer>
 
+<script>
+    $(function(){
+        $("#back").click(function(){
+            window.history.go(-1);
+        });
+        function handleTxt(data){
+            var list="";
+            var list2="";
+            for(var i=0;i<data.length;i++){
+                if(i<2){
+                    list+=  "<li><p><img src="+data[i].icon+">"+data[i].name+"</p><p>"+data[i].comment+"</p><div><time>"+data[i].time+"</time>分类:<span>"+data[i].type+"</span></div></li>";
+                }else{
+                    list2+=  "<li><p><img src="+data[i].icon+">"+data[i].name+"</p><p>"+data[i].comment+"</p><div><time>"+data[i].time+"</time>分类:<span>"+data[i].type+"</span></div></li>";
+                }
+            }
+            $("#commentFirst").html(list);
+            $("#commentSecond").html(list2);
+            $("#commentCount").text(data.length);
+        }
+        $.ajax({
+            url:"json/product.json",
+            type:"get",
+            dataType:"json",
+            success:handleTxt
+        });
+        $("#more").click(function() {
+                    if($(this).text()!="更多"){
+                        $(this).text("更多");
+                        $("#commentSecond").hide();
+                    }else{
+                        $(this).text("收起");
+                        $("#commentSecond").show();
+                    }
+                }
+        );
+        if(){
+
+        }else if(){}else
+    });
+</script>
 </body>
 </html>

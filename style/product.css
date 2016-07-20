@@ -1,0 +1,166 @@
+body{
+    padding-top: 0.88rem;
+    padding-bottom: 0.8rem;
+}
+header{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0.3rem;
+    padding-right: 0.2rem;
+    font-size: 0.32rem;
+    height: 0.88rem;
+    background: #fff;
+    position: fixed;
+    top:0;
+    z-index: 99;
+}
+header>span:first-child{
+    width: 0.23rem;
+    height: 0.42rem;
+    background: url(../images/companyService/back.png) no-repeat center center;
+    background-size:100% 100% ;
+}
+header>div:last-child span:first-child{
+    display: inline-block;
+    width:0.43rem;
+    height: 0.41rem;
+    background: url(../images/product/share.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+header>div:last-child span:last-child{
+    display: inline-block;
+    width:0.33rem;
+    height: 0.42rem;
+    background: url(../images/companyService/message.png) no-repeat center center;
+    background-size: 100% 100%;
+    margin-left: 0.2rem;
+}
+.topActive{
+    border-bottom: 0.03rem solid #e8373b;
+    color:#e8373b;
+}
+.banner{
+    border-bottom: 0.08rem solid #eee;
+}
+.banner img{
+    height: 4.4rem;
+    display: block;
+}
+.bannerFirst{
+   font-size: 0.32rem;
+    color:#313131;
+    padding-left: 0.3rem;
+    line-height: 0.32rem;
+    margin-top: 0.2rem;
+
+}
+.bannerActive{
+    background:#313131;
+}
+.bannerActive2{
+    background:#e8373b;
+}
+.bannerSecond{
+    font-size: 0.42rem;
+    color:#e8373b;
+    padding-left: 0.3rem;
+    line-height: 0.9rem;
+}
+.bannerSecond span:last-child{
+    text-decoration: line-through;
+    font-size: 0.2rem;
+    color:#6a6a6a;
+    margin-left: 0.2rem;
+}
+#comment{
+    border-bottom: 0.08rem solid #eee;
+}
+#comment>h1{
+    line-height: 0.8rem;
+    padding-left: 0.2rem;
+    border-bottom: 1px solid #eee;
+}
+.comment li{
+    padding:0 0.2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #eee;
+}
+.comment li p img{
+    display: inline-block;
+    width:0.55rem;
+    height: 0.55rem;
+    vertical-align: middle;
+    margin-right: 0.22rem;
+}
+.comment li p:first-child{
+    font-size: 0.22rem;
+    color:#313131;
+    line-height: 0.8rem;
+}
+.comment li p:nth-of-type(2){
+    font-size: 0.22rem;
+    color:#313131;
+    line-height: 0.36rem;
+}
+.comment li>div{
+    margin-top: 0.2rem;
+    font-size: 0.24rem;
+    color: #a6a6a6;
+}
+.comment li>div time{
+    margin-right: 0.36rem;
+}
+#comment>p:last-child{
+    padding-left: 0.2rem;
+    font-size: 0.3rem;
+    color: #e8373b;
+    line-height: 0.8rem;
+}
+footer{
+    position: fixed;
+    bottom:0;
+    z-index: 99;
+    background: #fff;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+.footerSpan{
+    font-size: 0.22rem;
+    color:#6a6a6a;
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.8rem;
+    line-height: 0.22rem;
+    text-align: center;
+    padding:0 0.34rem;
+}
+footer div:first-child span:first-child{
+    background: url(../images/product/customer.png) no-repeat center top;
+    background-size: 0.45rem 0.45rem;
+    border-right: 1px solid #eee;
+}
+footer div:first-child span:last-child{
+    background: url(../images/product/collect.png) no-repeat center top;
+    background-size: 0.42rem 0.42rem;
+}
+.footerActive{
+    color:#e8373b;
+}
+footer div:nth-of-type(2) span:first-child{
+    line-height: 0.8rem;
+    color:#fff;
+    font-size: 0.32rem;
+    vertical-align: middle;
+    background: #ff9900;
+    display: inline-block;
+    text-align: center;
+}
+footer div:nth-of-type(2) span:last-child{
+    line-height: 0.8rem;
+    color:#fff;
+    font-size: 0.32rem;
+    vertical-align: middle;
+    background: #e8373b;
+    display: inline-block;
+    text-align: center;
+}
