@@ -17,6 +17,19 @@
         <input type="text"  name="q" id="search" placeholder="请输入文字"/>
         <img src="images/homePage/ring.png">
     </header>
+    <ul id="content1" class="content">
+        <!--<li>-->
+            <!--<img src="images/solve/thing1.gif" alt=""/>-->
+            <!--<div>-->
+                <!--<p>互联网+医药</p>-->
+                <!--<p>企业OA系统是企业需要的，可以通过移动端 实现，</p>-->
+            <!--</div>-->
+        <!--</li>-->
+    </ul>
+    <ul id="content2" class="content" style="display: none;">
+
+    </ul>
+    <h1 class="more">更多</h1>
     <footer>
         <ul class="df jcsb">
             <li >
@@ -45,5 +58,26 @@
             </li>
         </ul>
     </footer>
+
+<script>
+    $(function(){
+        $.get("json/solve.json",function(data){
+            var list1="";
+            var list2="";
+            for(var i=0;i<data.length;i++){
+                if(i<5){
+                    list1+="<li><img src="+data[i].img+"/><div><p>"+data[i].type+"</p><p>"+data[i].message+"</p></div></li>";
+                }else{
+                    list2+="<li><img src="+data[i].img+"/><div><p>"+data[i].type+"</p><p>"+data[i].message+"</p></div></li>";
+                }
+            }
+            $("#content1").html(list1);
+            $("#content2").html(list2);
+        });
+        $(".more").click(function(){
+            $("#content2").show();
+        });
+    });
+</script>
 </body>
 </html>
