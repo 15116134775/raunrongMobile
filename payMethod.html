@@ -12,6 +12,57 @@
     <title>支付方式</title>
 </head>
 <body>
+    <header class="tc">
+        <a href="javascript:history.go(-1)"></a>支付方式<a href="#"></a>
+    </header>
+    <form action="" method="post">
+        <div class="money"><label for="money" class="f32 g3">支付方式：</label><input type="text" name="money" id="money"/></div>
+        <h1>支付</h1>
+        <div class="method wx df jcsb aic">
+            <label for="wx" class="f28 g6">微信</label>
+            <input type="radio" name="pay" value="wx" id="wx">
+        </div>
+        <div class="method zfb df jcsb aic" >
+            <label for="zfb" class="f28 g6">支付宝</label>
+            <input type="radio" name="pay" value="zfb" id="zfb">
+        </div>
+        <h1>其他支付</h1>
+        <div class="method bank df jcsb aic">
+            <label for="bank" class="f28 g6 lh30"><span>银行转账<br>确定后将会向您提供转账信息</span></label>
+            <input type="radio" name="pay" value="bank" id="bank">
+        </div>
+    </form>
 
+<script>
+    $(function(){
+        function radio_style() {//3设置样式
+            if (gettag("input")) {
+                var r = gettag("input");
+                function select_element(obj, type) {//1设置背景图片
+                    obj.parentNode.style.background = "url(button.gif) no-repeat 0.3rem 0px";
+                    obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";
+                    if (obj.type == "checkbox") { obj.parentNode.style.background = "url(button.gif) no-repeat -0.3rem -0.3rem";obj.parentNode.style.backgroundSize = "0.3rem 0.3rem"; }
+                    if (type) {
+                        obj.parentNode.style.background = "url(button.gif) no-repeat 0px 0px";
+                        obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";
+                        if (obj.type == "checkbox") { obj.parentNode.style.background = "url(button.gif) no-repeat 0px -0.3rem"; obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";}
+                    }
+                }
+                for (var i = 0; i < r.length; i++) {
+                    if (r[i].type == "radio" || r[i].type == "checkbox") {
+                        r[i].style.opacity = 0; r[i].style.filter = "alpha(opacity=0)";//隐藏真实的checkbox和radio
+                        r[i].onclick = function() { select_element(this); unfocus(); }
+                        if (r[i].checked == true) { select_element(r[i]); } else { select_element(r[i], 1); }
+                    }
+                }
+                function unfocus() {//2处理未选中
+                    for (var i = 0; i < r.length; i++) {
+                        if (r[i].type == "radio" || r[i].type == "checkbox") { if (r[i].checked == false) { select_element(r[i], 1) } }
+                    }
+                }
+            }
+        }
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,46 @@
+body{
+    padding-top:0.88rem;
+}
+input{
+    background: #fff;
+    border:none;
+}
+form{
+    border-top: 0.1rem solid #eee;
+}
+.money{
+    line-height: 1rem;
+    margin:0 .3rem;
+    border-bottom: 1px solid #eee;
+}
+.money input{
+    line-height: 1rem;
+    font-size: 0.32rem;
+    color:#333;
+}
+form h1{
+    line-height: 0.7rem;
+    font-size: 0.32rem;
+    margin:0.7rem 0.3rem 0 0.3rem;
+    font-weight: normal;
+    border-bottom: 1px solid #999;
+}
+.method{
+    height: 1rem;
+    line-height: 1rem;
+    margin:0 .3rem;
+    border-bottom: 1px solid #eee;
+    padding-left: 0.7rem;
+}
+.wx{
+    background: url(../images/payMethod/icon1.png) no-repeat left center;
+    background-size:0.35rem 0.35rem ;
+}
+.zfb{
+    background: url(../images/payMethod/icon2.png) no-repeat left center;
+    background-size:0.35rem 0.35rem ;
+}
+.bank{
+    background: url(../images/payMethod/icon3.png) no-repeat left center;
+    background-size:0.35rem 0.35rem ;
+}
