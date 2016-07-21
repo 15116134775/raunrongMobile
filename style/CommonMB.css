@@ -16,6 +16,7 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 /* width */
 /* fixed width value */
 .w20{width:.20rem;}
+.w30{width:0.3rem;}
 .w50{width:.50rem;}
 .w70{width:.70rem;}
 .w100{width:1.00rem;}

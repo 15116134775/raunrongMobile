@@ -16,36 +16,39 @@
         <a href="javascript:history.go(-1)"></a>支付方式<a href="#"></a>
     </header>
     <form action="" method="post">
-        <div class="money"><label for="money" class="f32 g3">支付方式：</label><input type="text" name="money" id="money"/></div>
+        <div class="money"><label for="money" class="f32 g3">支付金额：</label><input type="text" name="money" id="money"/></div>
         <h1>支付</h1>
         <div class="method wx df jcsb aic">
             <label for="wx" class="f28 g6">微信</label>
-            <input type="radio" name="pay" value="wx" id="wx">
+            <span class="dib w30 h30 df"><input type="radio" name="pay" value="wx" id="wx" class="w30 h30"></span>
         </div>
         <div class="method zfb df jcsb aic" >
             <label for="zfb" class="f28 g6">支付宝</label>
-            <input type="radio" name="pay" value="zfb" id="zfb">
+            <span class="dib w30 h30 df"><input type="radio" name="pay" value="zfb" id="zfb" class="w30 h30"></span>
         </div>
         <h1>其他支付</h1>
         <div class="method bank df jcsb aic">
             <label for="bank" class="f28 g6 lh30"><span>银行转账<br>确定后将会向您提供转账信息</span></label>
-            <input type="radio" name="pay" value="bank" id="bank">
+            <span class="dib w30 h30 df"><input type="radio" name="pay" value="bank" id="bank" class="w30 h30"></span>
         </div>
+        <input type="submit" value="提交">
     </form>
 
 <script>
     $(function(){
-        function radio_style() {//3设置样式
+        function getid(id) { return document.getElementById(id); }
+        function gettag(tag, obj) { if (obj) { return obj.getElementsByTagName(tag) } else { return document.getElementsByTagName(tag) } }
+        (function radio_style() {//3设置样式
             if (gettag("input")) {
                 var r = gettag("input");
                 function select_element(obj, type) {//1设置背景图片
-                    obj.parentNode.style.background = "url(button.gif) no-repeat 0.3rem 0px";
+                    obj.parentNode.style.background = "url(images/payMethod/selected.png) no-repeat center center";
                     obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";
-                    if (obj.type == "checkbox") { obj.parentNode.style.background = "url(button.gif) no-repeat -0.3rem -0.3rem";obj.parentNode.style.backgroundSize = "0.3rem 0.3rem"; }
+                    if (obj.type == "checkbox") { obj.parentNode.style.background = "url(images/payMethod/button.gif) no-repeat center center";obj.parentNode.style.backgroundSize = "0.3rem 0.3rem"; }
                     if (type) {
-                        obj.parentNode.style.background = "url(button.gif) no-repeat 0px 0px";
+                        obj.parentNode.style.background = "url(images/payMethod/select.png) no-repeat center center";
                         obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";
-                        if (obj.type == "checkbox") { obj.parentNode.style.background = "url(button.gif) no-repeat 0px -0.3rem"; obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";}
+                        if (obj.type == "checkbox") { obj.parentNode.style.background = "url(images/payMethod/button.gif) no-repeat center center"; obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";}
                     }
                 }
                 for (var i = 0; i < r.length; i++) {
@@ -61,7 +64,16 @@
                     }
                 }
             }
-        }
+        })();
+        $.ajax({
+            url:'',
+            data:$("form").serialize(),
+            type:'post',
+            success:function(data){},
+            error:function(){
+                alert("提交失败");
+            }
+        });
     });
 </script>
 </body>

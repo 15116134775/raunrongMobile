@@ -1,5 +1,6 @@
 body{
     padding-top:0.88rem;
+    padding-bottom: 0.8rem;
 }
 input{
     background: #fff;
@@ -43,4 +44,15 @@ form h1{
 .bank{
     background: url(../images/payMethod/icon3.png) no-repeat left center;
     background-size:0.35rem 0.35rem ;
+}
+input[type='submit']{
+    background: #e8373b;
+    text-align: center;
+    line-height: 0.8rem;
+    height: 0.8rem;
+    font-size: 0.34rem;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
