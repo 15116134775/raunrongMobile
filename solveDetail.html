@@ -15,7 +15,7 @@
     <header class="df jcsb aic">
         <span id="back" class=""></span>
         <div class="g6v f32">
-            方案详情
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方案详情
         </div>
         <div class="">
             <span id="share"></span>
@@ -23,19 +23,50 @@
         </div>
     </header>
     <div class="header">
-        <h1>互联网+医药</h1>
-        <p>企业OA系统是企业需要的，可以通过移动端实现</p>
-        <img src="images/solveDetail/banner1.png"/>
+        <h1 class="tc f32 fwn g6 mt30">互联网+医药</h1>
+        <p class="tc f28 g6 mt30 mb35">企业OA系统是企业需要的，可以通过移动端实现</p>
+        <img src="images/solveDetail/banner1.png" style="width: 100%;height: 2.6rem;" class="db"/>
     </div>
-
+    <h1 class="f32 g6 light pl30 pr30">精品推荐</h1>
+    <p class="g6 pl30 pr30">精品推荐 我们拥有完美的互联网经营医药的各种方面，也有网联网经营的各项技术，所以对于互联网+医药也是我们公司的强项，以下两图使我们公司医药发展互联网行业铮铮日上。</p>
+    <div class="img">
+        <img src="images/solveDetail/banner2.png" style="width: 100%;height: 2.6rem;"/>
+        <img src="images/solveDetail/banner2.png" style="width: 100%;height: 2.6rem;"/>
+    </div>
+    <h1 class="f32 g6 light pl30 pr30">精品推荐</h1>
+    <p class="g6 pr30 pl30">精品推荐 我们拥有完美的互联网经营医药的各种方面，也有网联网经营的各项技术，所以对于互联网+医药也是我们公司的强项，以下两图使我们公司医药发展互联网行业铮铮日上。</p>
+    <h2>相关推荐</h2>
+    <ul id="intro">
+        <li>
+            <img src="images/solveDetail/introduce1.png"/>
+            <p>新能源开发</p>
+            <p>预售¥11000<span>原价：¥19000</span></p>
+        </li>
+        <li>
+            <img src="images/solveDetail/introduce2.png"/>
+            <p>新能源开发</p>
+            <p>预售¥11000<span>原价：¥19000</span></p>
+        </li>
+        <li>
+            <img src="images/solveDetail/introduce1.png"/>
+            <p>新能源开发</p>
+            <p>预售¥11000<span>原价：¥19000</span></p>
+        </li>
+        <li>
+            <img src="images/solveDetail/introduce2.png"/>
+            <p>新能源开发</p>
+            <p>预售¥11000<span>原价：¥19000</span></p>
+        </li>
+    </ul>
+    <footer>立即申请</footer>
     <div class="am-share">
         <h3 class="am-share-title">分享到</h3>
         <ul class="am-share-sns">
-            <li><a href="#"> <i class="share-icon-weibo1"></i> <span>微博</span> </a> </li>
+            <li><a href="#"> <i class="share-icon-weibo1"></i> <span>私信和群</span> </a> </li>
             <li><a href="#"> <i class="share-icon-weibo2"></i> <span>微信好友</span> </a> </li>
             <li><a href="#"> <i class="share-icon-weibo3"></i> <span>朋友圈</span> </a> </li>
-            <li><a href="#"> <i class="share-icon-weibo4"></i> <span>QQ</span> </a> </li>
-            <li><a href="#"> <i class="share-icon-weibo5"></i> <span>QQ空间</span> </a> </li>
+            <li><a href="#"> <i class="share-icon-weibo4"></i> <span>支付宝好友</span> </a> </li>
+            <li><a href="#"> <i class="share-icon-weibo5"></i> <span>生活圈</span> </a> </li>
         </ul>
         <div class="am-share-footer"><button class="share_btn">取消</button></div>
     </div>
@@ -44,26 +75,6 @@
     $(function(){
         $("#back").click(function(){
             window.history.go(-1);
-        });
-        function handleTxt(data){
-            var list="";
-            var list2="";
-            for(var i=0;i<data.length;i++){
-                if(i<2){
-                    list+=  "<li><p><img src="+data[i].icon+">"+data[i].name+"</p><p>"+data[i].comment+"</p><div><time>"+data[i].time+"</time>分类:<span>"+data[i].type+"</span></div></li>";
-                }else{
-                    list2+=  "<li><p><img src="+data[i].icon+">"+data[i].name+"</p><p>"+data[i].comment+"</p><div><time>"+data[i].time+"</time>分类:<span>"+data[i].type+"</span></div></li>";
-                }
-            }
-            $("#commentFirst").html(list);
-            $("#commentSecond").html(list2);
-            $("#commentCount").text(data.length);
-        }
-        $.ajax({
-            url:"json/product.json",
-            type:"get",
-            dataType:"json",
-            success:handleTxt
         });
 
         function toshare(){
