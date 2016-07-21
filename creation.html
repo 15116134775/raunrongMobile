@@ -2,9 +2,160 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Footer.css">
+    <link rel="stylesheet" href="style/creation.css">
+    <title>创客空间</title>
 </head>
 <body>
+    <header class="fix tc f32">创客空间<span class="r" id="message"></span></header>
+    <div id="banner_tabs" class="flexslider">
+        <ul class="slides">
+            <li>
+                <a title="" target="_blank" href="#">
+                    <img alt="" style="background: url(images/creation/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/creation/banner.png" class="bannerSlider">
+                </a>
+            </li>
+            <li>
+                <a title="" href="#">
+                    <img alt="" style="background: url(images/homePage/thing1.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/thing1.png" class="bannerSlider">
+                </a>
+            </li>
+            <li>
+                <a title="" href="#">
+                    <img style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png" class="bannerSlider">
+                </a>
+            </li>
+            <li>
+                <a title="" href="#">
+                    <img style="background: url(images/homePage/banner.png) no-repeat center;width:100%;height: 2.8rem;" src="images/homePage/banner.png" class="bannerSlider">
+                </a>
+            </li>
+        </ul>
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+            <li class="active"><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>4</a></li>
+        </ol>
+    </div>
+    <ul class="intro df">
+        <li class="fx1">
+            <p class="tc f30 g6">天使贷</p>
+            <p class="tc f24 g6 mt30">解决燃眉之急</p>
+        </li>
+        <li class="fx1">
+            <p class="tc f30 g6">技术投资</p>
+            <p class="tc f24 g6 mt30">解决后顾之忧</p>
+        </li>
+        <li class="fx1">
+            <p class="tc f30 g6">联合投资</p>
+            <p class="tc f24 g6 mt30">解决创业风险</p>
+        </li>
+    </ul>
+    <h1 id="basis">基础服务</h1>
+    <ul class="serve fix">
+        <li>
+            <img src="images/creation/serve1.png">
+            <p>域名注册</p>
+        </li>
+        <li>
+            <img src="images/creation/serve2.png">
+            <p>云服务器</p>
+        </li>
+        <li>
+            <img src="images/creation/serve3.png">
+            <p>域名备案</p>
+        </li>
+        <li>
+            <img src="images/creation/serve4.png">
+            <p>商标申请</p>
+        </li>
+        <li>
+            <img src="images/creation/serve5.png">
+            <p>专利申请</p>
+        </li>
+        <li>
+            <img src="images/creation/serve6.png">
+            <p>著作权申请</p>
+        </li>
+    </ul>
+    <h1 class="more df jcsb"><span>天使资讯</span><span>更多</span></h1>
+    <ul id="event">
+        <li class="df jcsb pl30 pr30 f24 g6"><span>突发大事件来啦！</span><span class="g9">2016.09.08</span></li>
+        <li class="df jcsb pl30 pr30 f24 g6"><span>突发大事件来啦！</span><span class="g9">2016.09.08</span></li>
+        <li class="df jcsb pl30 pr30 f24 g6"><span>突发大事件来啦！</span><span class="g9">2016.09.08</span></li>
+    </ul>
+    <div>
+        <img src="images/creation/banner1.png" style="width: 100%;height: 3.2rem;">
+    </div>
+    <footer>
+        <ul class="df jcsb">
+            <li >
+                <a href="#" class="df fdc aic">
+                    <img src="images/solve/footer1.png">
+                    <p >产品服务</p>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="df fdc aic">
+                    <img src="images/homePage/footer2.png">
+                    <p >解决方案</p>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="df fdc aic">
+                    <img src="images/creation/footer3.png">
+                    <p style="color:#e8373b">创客空间</p>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="df fdc aic">
+                    <img src="images/homePage/footer4.png">
+                    <p >我的</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
 
+    <script src="js/slider.js"></script>
+    <script src="js/touch-0.2.11-min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var bannerSlider = new Slider($('#banner_tabs'), {
+                time: 5000,
+                delay: 400,
+                event: 'hover',
+                auto: true,
+                mode: 'fade',
+                controller: $('#bannerCtrl'),
+                activeControllerCls: 'active'
+            });
+//            touch.config(
+//                    {
+//                        tap: true,                  //tap类事件开关, 默认为true
+//                        doubleTap: true,            //doubleTap事件开关， 默认为true
+//                        hold: true,                 //hold事件开关, 默认为true
+//                        holdTime: 650,              //hold时间长度
+//                        swipe: true,                //swipe事件开关
+//                        swipeTime: 300,             //触发swipe事件的最大时长
+//                        swipeMinDistance: 18,       //swipe移动最小距离
+//                        swipeFactor: 5,             //加速因子, 值越大变化速率越快
+//                        drag: true,                 //drag事件开关
+//                        pinch: true,                //pinch类事件开关
+//                    }
+//            );
+            touch.on('.bannerSlider', 'swipeleft', function(ev){
+                bannerSlider.next();
+            });
+            touch.on('.bannerSlider', 'swiperight', function(ev){
+                bannerSlider.prev();
+            });
+        })
+    </script>
 </body>
 </html>

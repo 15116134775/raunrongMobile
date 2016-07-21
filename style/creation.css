@@ -1,0 +1,133 @@
+body{
+    padding-top: 0.88rem;
+    padding-bottom: 1rem;
+}
+header{
+    line-height: 0.88rem;
+    padding:0 0.3rem;
+    box-sizing: border-box;
+    width: 100%;
+    background: #e8373b;
+    position: fixed;
+    top: 0;
+    color: #fff;
+}
+#message{
+    width: 0.3rem;
+    height: 0.4rem;
+    margin-top: 0.25rem;
+    background: url("../images/homePage/ring.png") no-repeat center center;
+    background-size: 0.3rem 0.4rem;
+}
+.flexslider {
+    margin: 0px auto;
+    position: relative;
+    width: 100%;
+    height: 2.8rem;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.flexslider .slides li {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom:0rem;
+    text-align: center;
+    font-size: 0.25rem;
+}
+
+.flex-control-nav li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.flex-control-paging li a {
+    background: url(../images/homePage/dot.png) no-repeat 0 -0.25rem;
+    background-size:0.25rem 0.5rem ;
+    display: block;
+    height: 0.25rem;
+    overflow: hidden;
+    text-indent: -99em;
+    width: 0.25rem;
+    cursor: pointer;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+    background-position: 0 0;
+}
+.flexslider .slides a img {
+    width: 100%;
+    display: block;
+}
+.intro{
+    padding-top:0.3rem;
+    padding-bottom:0.2rem ;
+    border-bottom: 0.1rem solid #eee;
+}
+.intro li{
+    height: 3rem;
+}
+.intro li:first-child{
+    background: url(../images/creation/intro1.png) no-repeat center bottom;
+    background-size:1rem 1.8rem ;
+}
+.intro li:nth-of-type(2){
+    background: url(../images/creation/intro2.png) no-repeat center bottom;
+    background-size:1rem 1.8rem ;
+}
+.intro li:nth-of-type(3){
+    background: url(../images/creation/intro3.png) no-repeat center bottom;
+    background-size:1rem 1.8rem ;
+}
+#basis{
+    line-height: 0.8rem;
+    font-size: 0.24rem;
+    padding-left: 0.3rem;
+    font-weight: normal;
+    color:#666;
+}
+.serve{
+    border-top:0.02rem solid #eee;
+    border-bottom:0.02rem solid #eee;
+}
+.serve li{
+    width: 2.48rem;
+    height: 1.36rem;
+    float: left;
+    margin:0.3rem 0;
+    text-align: center;
+}
+.serve li img{
+    width: 0.88rem ;
+    height: 0.88rem;
+    display: inline-block;
+}
+.serve li p{
+    font-size: 0.24rem;
+    text-align: center;
+    color: #666;
+    margin-top: 0.15rem;
+}
+.more{
+    line-height: 0.8rem;
+    font-size: 0.24rem;
+    padding:0 0.3rem;
+    font-weight: normal;
+    color: #666;
+}
+.more span:last-child{
+    width: 0.77rem;
+    background: url(../images/solve/right.png) no-repeat right center;
+    background-size: 0.2rem 0.3rem;
+}
+#event li{
+    line-height: 0.8rem;
+    border-top: 1px solid #eee;
+}
