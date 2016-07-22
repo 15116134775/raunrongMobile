@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <link rel="stylesheet" href="style/customization.css">
+    <title>联合投资申请</title>
+</head>
+<body>
+<header class="tc">
+    <a href="javascript:history.go(-1)"></a>
+    联合投资申请
+    <a href="#"></a>
+</header>
+<div id="banner">
+    <img src="images/combineApply/banner.png" alt="">
+</div>
+<form action="" method="post">
+    <ul >
+        <li><input type="text" placeholder="公司名称" name="name"></li>
+        <li><input type="text" placeholder="公司地址" name="address"></li>
+        <li><input type="text" placeholder="联系人" name="people"></li>
+        <li><input type="text" placeholder="联系电话" name="phone"></li>
+        <li class="slide"><input type="text" placeholder="邮箱" name="email"></li>
+        <li><input type="text" placeholder="需求描述" name="detail"></li>
+    </ul>
+    <input type="submit" value="立即申请">
+</form>
+<script>
+    $(function(){
+        $.ajax({
+            url:"",
+            type:"post",
+            data:$("form").serialize(),
+            success:function(data){
+            }
+        });
+    });
+</script>
+</body>
+</html>
