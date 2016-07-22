@@ -35,6 +35,7 @@ button{
     -moz-border-radius-bottomright: 0.1rem;
     -moz-border-radius-topright: 0.1rem;
 }
+
 h1{
     line-height: 0.86rem;
     border-top: 0.04rem solid #eee;
@@ -61,4 +62,12 @@ input[type="submit"]{
     background: #e8373b;
     text-align: center;
     color: #fff;
+}
+.bg{
+    background: url(../images/companyService/down.png) no-repeat right center;
+    background-size: 0.2rem 0.12rem;
+}
+select{
+    background: #fff;
+    border: none;
 }
