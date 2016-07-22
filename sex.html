@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <style>
+        form{
+            margin-top: 0.88rem;
+            border-top: 0.1rem solid #eee;
+            padding-right: 0.3rem;
+        }
+    </style>
+    <title>性别</title>
+</head>
+<body>
+    <header class="tc">
+        <a href="javascript:history.go(-1)"></a>
+        性别
+        <a href="#" style="width: 0.6rem;background: #fff;font-size: 0.28rem;color:#666;line-height: 0.32rem;">保存</a>
+    </header>
+    <form>
+        <div class="pl30 pr30 lh100 df jcsb aic bbe"><label for="man" class="f28 g6 fx1">男</label><input class="" type="radio" name="sex" id="man"></div>
+        <div class="pl30 pr30 lh100 df jcsb aic bbe"><label class="f28 g6 fx1" for="woman">女</label><input type="radio" name="sex" id="woman"></div>
+    </form>
+
+<script>
+    $(function(){
+        function getid(id) { return document.getElementById(id); }
+        function gettag(tag, obj) { if (obj) { return obj.getElementsByTagName(tag) } else { return document.getElementsByTagName(tag) } }
+        (function radio_style() {//3设置样式
+            if (gettag("input")) {
+                var r = gettag("input");
+                function select_element(obj, type) {//1设置背景图片
+                    obj.parentNode.style.background = "url(images/payMethod/selected.png) no-repeat right center";
+                    obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";
+                    if (obj.type == "checkbox") { obj.parentNode.style.background = "url(images/payMethod/button.gif) no-repeat right center";obj.parentNode.style.backgroundSize = "0.3rem 0.3rem"; }
+                    if (type) {
+                        obj.parentNode.style.background = "url(images/payMethod/select.png) no-repeat right center";
+                        obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";
+                        if (obj.type == "checkbox") { obj.parentNode.style.background = "url(images/payMethod/button.gif) no-repeat right center"; obj.parentNode.style.backgroundSize = "0.3rem 0.3rem";}
+                    }
+                }
+                for (var i = 0; i < r.length; i++) {
+                    if (r[i].type == "radio" || r[i].type == "checkbox") {
+                        r[i].style.opacity = 0; r[i].style.filter = "alpha(opacity=0)";//隐藏真实的checkbox和radio
+                        r[i].onclick = function() { select_element(this); unfocus(); }
+                        if (r[i].checked == true) { select_element(r[i]); } else { select_element(r[i], 1); }
+                    }
+                }
+                function unfocus() {//2处理未选中
+                    for (var i = 0; i < r.length; i++) {
+                        if (r[i].type == "radio" || r[i].type == "checkbox") { if (r[i].checked == false) { select_element(r[i], 1) } }
+                    }
+                }
+            }
+        })();
+    })
+</script>
+</body>
+</html>

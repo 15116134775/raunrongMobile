@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <style>
+        #content{
+            margin-top:0.88rem;
+            border-top: 0.1rem solid #eee;
+            padding-left: 0.3rem;;
+            padding-right:0.3rem;
+            height: 1rem;
+            line-height: 1rem;
+        }
+        input{
+            line-height: 1rem;
+            font-size: 0.3rem;
+            background: #fff;
+            border:none;
+            color:#666;
+        }
+        #del{
+            width:0.3rem;
+            height: 0.3rem;
+            background: url(images/person/del.png) no-repeat center center;
+            background-size: 0.3rem 0.3rem;;
+            margin-top:0.33rem;
+        }
+    </style>
+    <title>电话号码</title>
+</head>
+<body>
+<header class="tc">
+    <a href="javascript:history.go(-1)"></a>
+    电话号码
+    <a href="#" style="width: 0.6rem;background: #fff;font-size: 0.28rem;color:#666;line-height: 0.32rem;">保存</a>
+</header>
+<div id="content" class="fix"><form class="l"><input type="text" name="name" value="阿星"></form><span class="r" id="del"></span></div>
+
+<script>
+    $(function(){
+        $("input").val("18181822322");
+        $("#del").click(function(){
+            $("input").val("");
+        });
+    })
+</script>
+</body>
+</html>
