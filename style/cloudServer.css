@@ -1,0 +1,64 @@
+body{
+    margin-top: 0.88rem;
+    margin-bottom: 1rem;
+}
+.nav{
+    border-top: 0.1rem solid #eee;
+    line-height: 1rem;
+    text-align: center;
+
+}
+button{
+    width: 2.75rem;
+    height: 0.8rem;
+    vertical-align:middle;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.3rem;
+    background: #fff;
+    border:1px solid #e8373b;
+    color: #e8373b;
+}
+.active{
+    background: #e8373b;
+    color: #fff;
+}
+.nav button:first-child{
+    border-top-left-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+    -moz-border-radius-bottomleft: 0.1rem;
+    -moz-border-radius-topleft: 0.1rem;
+}
+.nav button:last-child{
+    border-top-right-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+    -moz-border-radius-bottomright: 0.1rem;
+    -moz-border-radius-topright: 0.1rem;
+}
+h1{
+    line-height: 0.86rem;
+    border-top: 0.04rem solid #eee;
+}
+ul li{
+    height: 1rem;
+    border-top: 1px solid #eee;
+}
+.submit{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    background: #ffffff;
+}
+.submit div span{
+    color:#e8373b;
+    padding: 0.1rem;
+}
+input[type="submit"]{
+    width: 2.5rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    background: #e8373b;
+    text-align: center;
+    color: #fff;
+}

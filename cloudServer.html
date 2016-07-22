@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <link rel="stylesheet" href="style/cloudServer.css">
+    <title>云服务器</title>
+</head>
+<body>
+    <header class="tc">
+        <a href="javascript:history.go(-1)"></a>
+        云服务器
+        <a href="#"></a>
+    </header>
+    <div class="nav">
+        <button class="active">包年包月</button><button>按流量付</button>
+    </div>
+    <h1 class="pl30 f32 g9 n">包年包月</h1>
+    <form action="" method="get">
+        <ul>
+            <li class="df jcsb pr30 pl30 f24 g9 aic"><label for="address">地域</label>
+                <select name="address" id="address" class="f24 g9">
+                    <option value="1">华北1</option>
+                </select>
+            </li>
+            <li class="df jcsb pr30 pl30 f24 g9 aic"><label for="net">网络</label>
+                <select name="net" id="net" class="f24 g9">
+                    <option value="1">标准网络</option>
+                </select>
+            </li>
+            <li class="df jcsb pr30 pl30 f24 g9 aic"><label for="count">购买量</label>
+                <select name="count" id="count" class="f24 g9">
+                    <option value="1">1月</option>
+                </select>
+            </li>
+        </ul>
+        <div class="submit df jcsb">
+            <div class="fx1 pl30 df aic f28 g9">配置费用<span>¥300</span></div>
+            <input type="submit" value="立即购买">
+        </div>
+    </form>
+
+    <script>
+        $(function(){
+            $.ajax({
+                url:"",
+                type:"post",
+                data:$("form").serialize(),
+                success:function(data){
+                }
+            });
+        });
+    </script>
+</body>
+</html>
