@@ -2,9 +2,45 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <link rel="stylesheet" href="style/domainRecord.css">
+    <title>域名备案</title>
 </head>
 <body>
-
+    <header class="tc">
+        <a href="javascript:history.go(-1)"></a>
+        域名备案
+        <a href="#"></a>
+    </header>
+    <form action="" method="get">
+        <h1 class="f32 g6 n tc lh100">备案填写</h1>
+        <ul>
+            <li class="bte"><input type="text" class="lh100 f30 g9 bgwh bd_none pl30" placeholder="单位名称"/></li>
+            <li class="bte"><input type="text" class="lh100 f30 g9 bgwh bd_none pl30" placeholder="地址"/></li>
+            <li class="bte"><input type="text" class="lh100 f30 g9 bgwh bd_none pl30" placeholder="联系人"/></li>
+            <li class="bte"><input type="text" class="lh100 f30 g9 bgwh bd_none pl30" placeholder="联系电话"/></li>
+        </ul>
+        <h1 class="f32 g6 n tc lh100">照片填选</h1>
+        <ul>
+            <li class="df jcsa pt20 bte pb30">
+                <div class="photo df fdc aic jcc"><span class="photoFirst"><input type="file" capture="camera" accept="image/*" id="zhizhao" name="zhizhao" class="opa0"></span><span class="f28 g9 mt30">执照</span></div>
+                <div class="photo df fdc aic jcc"><span class="photoFirst"><input type="file" capture="camera" accept="image/*" id="jiancha" name="jiancha" class="opa0"></span><span class="f28 g9 mt30">检查单</span></div>
+            </li>
+            <li class="df jcsa pt20 bte pb30">
+                <div class="photo df fdc aic jcc"><span class="photoFirst"><input type="file" capture="camera" accept="image/*" id="zheng" name="zheng" class="opa0"></span><span class="f28 g9 mt30">法人正面</span></div>
+                <div class="photo df fdc aic jcc"><span class="photoFirst"><input type="file" capture="camera" accept="image/*" id="fan" name="fan" class="opa0"></span><span class="f28 g9 mt30">法人反面</span></div>
+            </li>
+            <li class="df jcsa pt20 bte pb30">
+                <div class="photo df fdc aic jcc"><span class="photoFirst"><input type="file" capture="camera" accept="image/*" id="fzheng" name="fzheng" class="opa0"></span><span class="f28 g9 mt30">负责人正面</span></div>
+                <div class="photo df fdc aic jcc"><span class="photoFirst"><input type="file" capture="camera" accept="image/*" id="ffan" name="ffan" class="opa0"></span><span class="f28 g9 mt30">负责人反面</span></div>
+            </li>
+        </ul>
+        <input type="submit" value="填写备案信息">
+    </form>
 </body>
 </html>

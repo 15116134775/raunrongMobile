@@ -1,0 +1,31 @@
+body{
+    margin-top: 0.88rem;
+    margin-bottom: 1rem;
+}
+h1{
+    border-top: 0.1rem solid #eee;
+}
+.photoFirst{
+    width:1.2rem;
+    height: 1.2rem;
+    border:1px solid #999;
+    border-radius: 0.04rem;
+    background: url(../images/domainRecord/photo.png) no-repeat center center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+input[type="file"]{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+input[type="submit"]{
+    width: 100%;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.34rem;
+    color: #fff;
+    background: #e8373b;
+    position: fixed;
+    bottom: 0;
+}

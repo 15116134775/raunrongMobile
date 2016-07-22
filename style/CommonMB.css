@@ -150,21 +150,21 @@ div.dib{*display:inline; *zoom:1;}/* other block level tag(eg. p, li, h1~h6), us
 .pl24{padding-left: .24rem}
 .pr24{padding-right: .24rem;}
 /* border-color name rule: border(b)-position(l/r/t/b/d)-width(null/2)-style(null/sh)-color(first one letter/first two letter) |-> All colors are safe color*/
-.bdc{border:0.1rem solid #ccc;}
-.blc{border-left:0.1rem solid #ccc;}
-.brc{border-right:0.1rem solid #ccc;}
-.btc{border-top:0.1rem solid #ccc;}
-.bbc{border-bottom:0.1rem solid #ccc;}
-.bdd{border:0.1rem solid #ddd;}
-.bld{border-left:0.1rem solid #ddd;}
-.brd{border-right:0.1rem solid #ddd;}
-.btd{border-top:0.1rem solid #ddd;}
-.bbd{border-bottom:0.1rem solid #ddd;}
-.bde{border:0.1rem solid #eee;}
-.ble{border-left:0.1rem solid #eee;}
-.bre{border-right:0.1rem solid #eee;}
-.bte{border-top:0.1rem solid #eee;}
-.bbe{border-bottom:0.1rem solid #eee;}
+.bdc{border:0.01rem solid #ccc;}
+.blc{border-left:0.01rem solid #ccc;}
+.brc{border-right:0.01rem solid #ccc;}
+.btc{border-top:0.01rem solid #ccc;}
+.bbc{border-bottom:0.01rem solid #ccc;}
+.bdd{border:0.01rem solid #ddd;}
+.bld{border-left:0.01rem solid #ddd;}
+.brd{border-right:0.01rem solid #ddd;}
+.btd{border-top:0.01rem solid #ddd;}
+.bbd{border-bottom:0.01rem solid #ddd;}
+.bde{border:0.01rem solid #eee;}
+.ble{border-left:0.01rem solid #eee;}
+.bre{border-right:0.01rem solid #eee;}
+.bte{border-top:0.01rem solid #eee;}
+.bbe{border-bottom:0.01rem solid #eee;}
 /* background-color name rule: bg - (key word/Hex color) |-> All colors are safe color */
 .bgwh{background-color:#fff;}
 .bgfb{background-color:#fbfbfb;}
