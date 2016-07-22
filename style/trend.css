@@ -1,0 +1,36 @@
+body{
+    margin-top: 0.88rem;
+}
+#content{
+    border-top: 0.04rem solid #eee;
+}
+#content li{
+    border-top: 0.04rem solid #eee;
+    padding-bottom: 0.16rem;
+}
+#content li h1{
+    font-size: 0.3rem;
+    color: #666;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    font-weight: normal;
+    line-height: 0.72rem;
+}
+#content li h1:after{
+    content: ".";
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    display: block;
+}
+#content li h1 span{
+    float: right;
+    font-size: 0.28rem;
+    color: #999;
+}
+#content li p{
+    font-size: 0.24rem;
+    color: #666;
+    padding:0 0.3rem;
+    line-height: 0.4rem;
+}

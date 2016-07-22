@@ -17,6 +17,23 @@
         天使动态
         <a href="#"></a>
     </header>
+    <ul id="content">
+        <!--<li>-->
+            <!--<h1>突发大事件<span>2016.09.18</span></h1>-->
+            <!--<p>请你特别留意星座出生图的财务状况，今年千万别乱杀扑满， 这是中药般温和的一年，重新体认物质的意义将是消费的重点</p>-->
+        <!--</li>-->
+    </ul>
 
+    <script>
+        $(function(){
+            $.post("json/trend.json",function(data){
+                var list="";
+                for(var i=0;i<data.length;i++){
+                    list+="<li><h1>"+data[i].head+"<span>"+data[i].time+"</span></h1><p>"+data[i].message+"</p></li>";
+                }
+                $("#content").html(list);
+            },"json")
+        });
+    </script>
 </body>
 </html>
