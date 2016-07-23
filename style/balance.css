@@ -1,0 +1,40 @@
+body{
+    background: #eee;
+}
+#main {
+    margin-top: 0.88rem;
+    height: 1.6rem;
+    border-top: 0.4rem solid #eee;
+    border-bottom: 0.4rem solid #eee;
+    padding-left: 0.3rem;
+    background: #fff url(../images/solve/right.png) no-repeat 7rem center;
+    background-size: 0.18rem 0.3rem;
+
+}
+form{
+
+}
+form div{
+    line-height: 1rem;
+    height: 1rem;
+    padding-left: 0.3rem;
+    background: #fff;
+}
+input{
+    border:none;
+    height: 0.5rem;
+    font-size: 0.28rem;
+    color: #999;
+    margin-left: 0.3rem;
+    background: #fff;
+}
+input[type="submit"]{
+    width: 5.5rem;
+    height: 0.8rem;
+    background: #ccc;
+    color: #fff;
+    font-size: 0.34rem;
+    margin-left: 0.9rem;
+    margin-top: 0.9rem;
+    border-radius: 0.1rem;
+}

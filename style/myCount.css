@@ -1,0 +1,63 @@
+body{
+    margin-top: 0.88rem;
+}
+.header{
+    width:100%;
+    box-sizing: border-box;
+    padding:0 0.3rem;
+    height: 3.9rem;
+    background: #3bbbea;
+    border-bottom: 0.06rem solid #eee;
+}
+.header h1{
+    font-size: 1.4rem;
+    color:#fff;
+    line-height: 3rem;
+    font-weight: normal;
+}
+ul{
+    padding:0 0.3rem;
+}
+ul li{
+    line-height: 1rem;
+    font-size: 0.3rem;
+    padding-left: 0.8rem;
+    height: 1rem;
+    border-top: 0.01rem solid #eee;
+    /*width: 100%;*/
+    /*box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    /*-webkit-box-sizing: border-box;*/
+
+}
+ul li:first-child{
+    background: url(../images/myCount/icon1.png) no-repeat left center;
+    background-size:0.6rem 0.6rem ;
+}
+ul li:nth-of-type(2){
+    background: url(../images/myCount/icon2.png) no-repeat left center;
+    background-size: 0.6rem 0.6rem ;
+}
+ul li:last-child{
+    background: url(../images/myCount/icon3.png) no-repeat left center;
+    background-size: 0.6rem 0.6rem;
+}
+ul li span{
+    width: 0.18rem;
+    height: 0.3rem;
+    position: relative;
+    top:50%;
+    margin-top: -0.15rem;
+}
+ul li:first-child span{
+    background: url(../images/solve/right.png) no-repeat center center;
+    background-size: 0.18rem 0.3rem;
+}
+ul li:nth-of-type(2) span{
+    background: url(../images/solve/right.png) no-repeat center center;
+    background-size: 0.18rem 0.3rem;
+}
+ul li:last-child span{
+    background: url(../images/solve/right.png) no-repeat center center;
+    background-size: 0.18rem 0.3rem;
+}
