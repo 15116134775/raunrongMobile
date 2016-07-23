@@ -1,0 +1,23 @@
+body{
+    margin-top: 0.92rem;
+    background: #eee;
+}
+ul li{
+    margin:0 0.3rem;
+    margin-top:0.08rem;
+    background: #fff;
+    height: 3.5rem;
+}
+ul li h1{
+    font-size: 0.32rem;
+    padding-left: 0.2rem;
+    font-weight: normal;
+    color: #666;
+    line-height: 0.72rem;
+}
+ul li img{
+    display: block;
+    width: 6.7rem;
+    height: 2.6rem;
+    margin-left: 0.1rem;
+}
