@@ -1,0 +1,30 @@
+body{
+    margin-top: 0.88rem;
+    background: #eee;
+    margin-bottom: 1rem;
+}
+#content{
+    height: 1.8rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    border-top:0.08rem solid #eee;
+    background: #fff;
+}
+#content div{
+    padding-left: 0.4rem;
+}
+#content div p:last-child{
+    color:#e8373b;
+    width: 100%;
+}
+#button{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    line-height: 1rem;
+    height: 1rem;
+    text-align: center;
+    font-size: 0.34rem;
+    color: #fff;
+    background: #e8373b;
+}
