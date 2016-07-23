@@ -2,9 +2,50 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <link rel="stylesheet" href="style/collection.css">
+    <title>我的收藏</title>
 </head>
 <body>
-
+    <header class="tc">
+        <a href="#"></a>
+        我的收藏
+        <a href="#"></a>
+    </header>
+    <nav>
+         <div class="active">近一月内收藏</div>
+         <div>全部收藏</div>
+    </nav>
+    <ul id="content">
+        <li>
+            <a href="">
+                <img src="images/companyService/thing1.png" alt="">
+                <p>新能源开发</p>
+                <p>¥11000<span>原价：¥19000</span></p>
+            </a>
+            <span>停<br/>售</span>
+            <b>取消收藏</b>
+        </li>
+    </ul>
+    <script>
+        $.get("json/collection.json",function(data){
+        var list="";
+        for(var i=0;i<data.length;i++){
+        if(data[i].sale=="停售"){
+        var li="<li>"+"<a href="+data[i].href+">"+"<img src="+data[i].src+">"+"<p>"+data[i].name+"</p>"+"<p>"+data[i].price+"<span>"+data[i].oprice+"</span></p></a>"+"<span>"+data[i].sale.charAt(0)+"<br>"+data[i].sale.charAt(1)+"</span><b>取消收藏</b></li>";
+        list+=li;
+        }else{
+        var li="<li>"+"<a href="+data[i].href+">"+"<img src="+data[i].src+">"+"<p>"+data[i].name+"</p>"+"<p>"+data[i].price+"<span>"+data[i].oprice+"</span></p></a>"+"<span class='stopsale'>"+data[i].sale.charAt(0)+"<br>"+data[i].sale.charAt(1)+"</span><b>取消收藏</b></li>";
+        list+=li;
+        }
+        }
+        $("#content").html(list);
+        });
+    </script>
 </body>
 </html>
