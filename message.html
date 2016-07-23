@@ -2,9 +2,39 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <link rel="stylesheet" href="style/message.css">
+    <title>消息</title>
 </head>
 <body>
+    <header class="tc">
+        <a href="#"></a>
+        消息
+        <a href="#"></a>
+    </header>
+    <ul id="content">
+        <li>
+            <img src="" alt=""/>
+            <div>
+                <p><span>活动</span><span>2016.06.08</span></p>
+                <p>火热推荐，十一买就送活动，活动详情尽在本网站</p>
+            </div>
+        </li>
+    </ul>
 
+    <script>
+        $.get("json/message.json",function(data){
+            var list="";
+            for(var i=0;i<data.length;i++){
+                list+= "<li><img src="+data[i].img+"/><div><p><span>"+data[i].name+"</span><span>"+data[i].time+"</span></p><p>"+data[i].content+"</p></div></li>";
+            }
+            $("#content").html(list);
+        });
+    </script>
 </body>
 </html>
