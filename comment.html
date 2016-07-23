@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/Reset.css">
     <link rel="stylesheet" href="style/CommonMB.css">
     <link rel="stylesheet" href="style/Header.css">
-    <link rel="stylesheet" href="style/person.css">
+    <link rel="stylesheet" href="style/comment.css">
     <title>我的评价</title>
 </head>
 <body>
@@ -17,16 +17,30 @@
         我的评价
         <a href="#"></a>
     </header>
-    <ul>
-        <li>
-            <img src="" />
-            <div>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-        </li>
+    <ul id="content">
+        <!--<li>-->
+            <!--<img src="images/comment/thing.png" />-->
+            <!--<div>-->
+                <!--<p>已好评新能源开发</p>-->
+                <!--<p><img src="images/comment/star4.png" ></p>-->
+                <!--<p>评价：作品速度快，质量保证</p>-->
+            <!--</div>-->
+        <!--</li>-->
     </ul>
 
+    <script>
+        $.ajax({
+            url:"json/comment.json",
+            type:'get',
+            dataType:'json',
+            success:function(data){
+                var list="";
+                for(var i=0;i<data.length;i++){
+                    list+='<li><img src='+data[i].img+ '/><div><p>'+data[i].name+'</p><p><img src='+data[i].star+'/></p><p>'+data[i].comment+'</p></div></li>';
+                }
+                $("#content").html(list);
+            }
+        });
+    </script>
 </body>
 </html>
