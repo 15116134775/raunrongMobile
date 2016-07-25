@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <link rel="stylesheet" href="style/integral.css">
+    <title>积分</title>
+</head>
+<body>
+    <header class="tc">
+        <a href="javascript:history.go(-1)"></a>
+        积分
+        <a href="#"></a>
+    </header>
+    <ul id="content">
+        <!--<li>-->
+            <!--<h1>您购买的<span>互联网+医药</span>已兑换<span>90</span>积分<span>2016.08.01</span></h1>-->
+            <!--<p>您购买的<span>互联网+医药</span>已兑换<span>90</span>积分，请在积分兑换处， 领取丰厚礼品祝您购物愉快</p>-->
+        <!--</li>-->
+    </ul>
+
+    <script>
+        $(function(){
+            $.get("json/integral.json",function(data){
+                var list="";
+                for(var i=0;i<data.length;i++){
+                    list+="<li><h1>您购买的<span>"+data[i].type+"</span>已兑换<span>"+data[i].count+"</span>积分<span>"+data[i].time+"</span></h1><p>您购买的<span>"+data[i].type+"</span>已兑换<span>"+data[i].count+"</span>积分，请在积分兑换处， 领取丰厚礼品祝您购物愉快</p></li>";
+                }
+                $("#content").html(list);
+            });
+        });
+    </script>
+</body>
+</html>
