@@ -1,0 +1,58 @@
+body{
+    margin-top: 0.88rem;
+    background: #eee;
+}
+h1{
+   line-height: 0.88rem;
+    color:#e8373b;
+    font-size: 0.33rem;
+    font-weight: normal;
+    padding-left: 0.3rem;
+}
+textarea{
+    margin:0 3%;
+    width: 94%;
+    display: block;
+    padding:0.3rem;
+    box-sizing: border-box;
+    font-size: 0.27rem;
+    color: #999;
+    font-family: "微软雅黑";
+    height: 3.6rem;
+    border-radius: 0.1rem;
+    border:none;
+    background: #fff;
+    resize: none;
+}
+p{
+    margin-top: 0.2rem;
+    font-size: 0.27rem;
+    color: #999;
+    line-height: 0.4rem;
+    padding:0 0.3rem;
+}
+form>div{
+    padding:0 0.3rem;
+    margin-top: 0.8rem;
+}
+input[type="button"]{
+    line-height: 0.9rem;
+    border:1px solid #e8373b;
+    background: #fff;
+    color: #e8373b;
+    text-align: center;
+    width: 1.9rem;
+    font-size: 0.34rem;
+    border-radius: 0.1rem;
+}
+input[type="submit"]{
+    margin-left: 0.3rem;
+    line-height: 0.9rem;
+    border:1px solid #e8373b;
+    background: #e8373b;
+    color: #fff;
+    text-align: center;
+    width: 4.6rem;
+    font-size: 0.34rem;
+    border-radius: 0.1rem;
+}
