@@ -1,0 +1,17 @@
+body{
+    margin-top: 0.88rem;
+    background: #eee;
+}
+ul li{
+    line-height: 1rem;
+    padding-left: 0.3rem;
+    font-size: 0.29rem;
+    color: #666;
+    background: #fff url(../images/solve/right.png) no-repeat 7rem center;
+    background-size: 0.18rem 0.3rem;
+    border-top: 1px solid #eee;
+}
+ul li:first-child{
+    border-top:0.1rem solid #eee;
+    border-bottom: 0.1rem solid #eee;
+}
