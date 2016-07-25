@@ -1,0 +1,73 @@
+body{
+    margin-top:0.88rem;
+    margin-bottom: 1rem;
+    border-top: 0.06rem solid #eee;
+}
+#banner{
+    height: 4rem;
+    width: 100%;
+    display: block;
+}
+form ul:first-child{
+    border-top:0.04rem solid #eee;
+    border-bottom: 0.04rem solid #eee;
+}
+form ul:first-child li{
+    line-height: 1rem;
+    padding-left: 0.3rem;
+    border-bottom: 0.02rem solid #eee;
+}
+form ul:first-child>li>input{
+    border:none;
+    font-size: 0.29rem;
+    color: #999;
+    background: #fff;
+}
+ul:nth-of-type(2){
+    width: 100%;
+}
+form ul:nth-of-type(2) li{
+    line-height: 1rem;
+    padding-left: 0.3rem;
+}
+form ul:nth-of-type(2)>li>input{
+    border:none;
+    font-size: 0.29rem;
+    color: #999;
+    background: #fff;
+}
+.photoFirst{
+    width:1.2rem;
+    height: 1.2rem;
+    border:1px solid #999;
+    border-radius: 0.04rem;
+    background: url(../images/domainRecord/photo.png) no-repeat center center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.add{
+    width:1.2rem;
+    height: 1.2rem;
+    border-radius: 0.04rem;
+    background: url(../images/authenticateP/icon.png) no-repeat center center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+input[type="file"],input[type="button"]{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.photo span:last-child{
+    line-height: 0.3rem;
+}
+input[type="submit"]{
+    width: 100%;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.34rem;
+    color: #fff;
+    background: #e8373b;
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <link rel="stylesheet" href="style/authenticateP.css">
+    <title>企业认证</title>
+</head>
+<body>
+<header class="tc">
+    <a href="javascript:history.go(-1)"></a>
+    企业认证
+    <a href="#"></a>
+</header>
+<img id="banner" src="images/authenticateP/banner2.png" alt=""/>
+<form action="">
+    <ul>
+        <li><input type="text" name="name" placeholder="请输入企业的姓名"/></li>
+        <li><input type="text" name="id" placeholder="请输入企业的证件编码"/></li>
+        <li><input type="text" name="phone" placeholder="请输入企业的电话号"/></li>
+    </ul>
+    <ul class="df pb30 fww">
+        <li class="df jcsa pt20 pb30">
+            <div class="photo df fdc aic jcc"><span class="photoFirst"><input type="file" capture="camera" accept="image/*" id="zhizhao" name="zhizhao" class="opa0"></span><span class="f28 g9">上传照片</span></div>
+        </li>
+        <li class="df jcsa pt20 pb30" id="add">
+            <div class="photo df fdc aic jcc"><span class="add"><input type="button" class="opa0"></span><span class="f28 g9">添加</span></div>
+        </li>
+    </ul>
+    <input type="submit" value="去认证">
+</form>
+
+<script>
+    $(function(){
+        var count=0;
+        $(".add").click(function(){
+            count++;
+            $('<li class="df jcsa pt20 pb30"><div class="photo df fdc aic jcc"><span class="photoFirst"><input type="file" capture="camera" accept="image/*"  name="zhizhao'+count+'" class="opa0"></span><span class="f28 g9">上传照片</span></div></li>').insertBefore("#add");
+        });
+    });
+</script>
+</body>
+</html>
