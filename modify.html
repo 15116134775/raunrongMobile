@@ -7,16 +7,23 @@
     <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="style/Reset.css">
     <link rel="stylesheet" href="style/CommonMB.css">
-    <link rel="stylesheet" href="style/Header.css">
     <link rel="stylesheet" href="style/modify.css">
     <title>修改密码</title>
 </head>
 <body>
-<header class="tc">
-    <a href="javascript:history.go(-1)"></a>
-    修改密码
-    <a href="#"></a>
-</header>
+    <header class="tc">
+        <a href="javascript:history.go(-1)"></a>
+        修改密码
+        <a href="#">保存</a>
+    </header>
+    <form action="">
+        <div class="fix pr30 pl30 lh100"><label for="phone" class="f28 g6">手机号</label><input type="text" id="phone" name="phone" class="r mt30 w180" value="1111111"/></div>
+        <ul>
+           <li class="pl30 lh100 bte"><input name="oldpw" type="text" placeholder="请输入旧密码"/></li>
+           <li class="pl30 lh100 bte"><input name="newpw" type="text" placeholder="请输入新密码"/></li>
+           <li class="pl30 lh100 bte"><input name="newpw2" type="text" placeholder="请再输入新密码"/></li>
+        </ul>
+    </form>
 
 </body>
 </html>
