@@ -2,9 +2,52 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1 ,user-scalable=0">
+    <script src="js/common.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/Reset.css">
+    <link rel="stylesheet" href="style/CommonMB.css">
+    <link rel="stylesheet" href="style/Header.css">
+    <style>
+        ul{
+            margin-top:0.88rem;
+        }
+        ul li{
+            height: 6rem;
+        /*line-height: 6rem;*/
+            text-align: center;
+            box-sizing: border-box;
+            padding-top:1.1rem;
+            border-top:0.08rem solid #eee;
+        }
+        ul li img{
+            width:3rem;
+            height: 3rem;
+            display: block;
+            margin: 0 auto;
+        }
+        ul li p{
+            font-size: 0.32rem;
+            line-height: 0.6rem;
+        }
+    </style>
+    <title>认证</title>
 </head>
 <body>
-
+    <header class="tc">
+        <a href="javascript:history.go(-1)"></a>
+        认证
+        <a href="#"></a>
+    </header>
+    <ul>
+        <li>
+            <img src="images/authenticate/icon1.png" alt=""/>
+            <p style="color: #e8373b;">个人认证</p>
+        </li>
+        <li>
+            <img src="images/authenticate/icon2.png" alt=""/>
+            <p style="color:#00ec3d;">企业认证</p>
+        </li>
+    </ul>
 </body>
 </html>
