@@ -20,7 +20,7 @@
         </div>
         <div class="">
             <span id="share"></span>
-            <span></span>
+            <span id="message"></span>
         </div>
     </header>
         <div class="banner">
@@ -51,7 +51,7 @@
                 <span class="footerSpan"><br><br>收藏</span>
             </div>
             <div class=" fx1 df ">
-                <span class="f32 fx1">我要定制</span>
+                <span class="f32 fx1" id="ding">我要定制</span>
                 <span class="f32 fx1" id="buy">立即购买</span>
             </div>
         </footer>
@@ -59,16 +59,18 @@
     <div class="am-share">
         <h3 class="am-share-title">分享到</h3>
         <ul class="am-share-sns">
-            <li><a href="#"> <i class="share-icon-weibo1"></i> <span>微博</span> </a> </li>
-            <li><a href="#"> <i class="share-icon-weibo2"></i> <span>微信好友</span> </a> </li>
-            <li><a href="#"> <i class="share-icon-weibo3"></i> <span>朋友圈</span> </a> </li>
-            <li><a href="#"> <i class="share-icon-weibo4"></i> <span>QQ</span> </a> </li>
-            <li><a href="#"> <i class="share-icon-weibo5"></i> <span>QQ空间</span> </a> </li>
+            <li><a href="#" onclick="javascript:bShare.share(event,'sinaminiblog',0);return false;"> <i class="share-icon-weibo1"></i> <span>微博</span> </a> </li>
+            <li><a href="#" onclick="javascript:bShare.share(event,'weixin',0);return false;"> <i class="share-icon-weibo2"></i> <span>微信好友</span> </a> </li>
+            <li><a href="#" onclick="javascript:bShare.share(event,'weixin',0);return false;"> <i class="share-icon-weibo3"></i> <span>朋友圈</span> </a> </li>
+            <li><a href="#" onclick="javascript:bShare.share(event,'qqim',0);return false;"> <i class="share-icon-weibo4"></i> <span>QQ</span> </a> </li>
+            <li><a href="#" onclick="javascript:bShare.share(event,'qzone',0);return false;"> <i class="share-icon-weibo5"></i> <span>QQ空间</span> </a> </li>
         </ul>
         <div class="am-share-footer"><button class="share_btn">取消</button></div>
     </div>
 
-<script>
+
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=id&style=-1"></script>
+    <script>
     $(function(){
         $("#back").click(function(){
             window.history.go(-1);
@@ -151,6 +153,15 @@
         }
         $("#share").click(function(){
             toshare();
+        });
+        $("#ding").click(function(){
+            window.location.href="customization.html";
+        });
+        $("#buy").click(function(){
+            window.location.href="payMethod.html";
+        });
+        $("#message").click(function(){
+            window.location.href="message.html";
         });
     });
 </script>

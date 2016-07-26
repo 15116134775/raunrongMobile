@@ -13,9 +13,9 @@
 </head>
 <body>
     <header class="tc">
-        <a href="#"></a>
+        <a href="javascript:history.go(-1)"></a>
         消息
-        <a href="#"></a>
+        <a href="message.html"></a>
     </header>
     <ul id="content">
         <li>
@@ -34,6 +34,9 @@
                 list+= "<li><img src="+data[i].img+"/><div><p><span>"+data[i].name+"</span><span>"+data[i].time+"</span></p><p>"+data[i].content+"</p></div></li>";
             }
             $("#content").html(list);
+        });
+        $("#content").delegate("li:first-child",'click',function(){
+           window.location.href= "activity.html";
         });
     </script>
 </body>

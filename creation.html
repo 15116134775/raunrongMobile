@@ -43,7 +43,7 @@
             <li><a>4</a></li>
         </ol>
     </div>
-    <ul class="intro df">
+    <ul class="intro df" id="top">
         <li class="fx1">
             <p class="tc f30 g6">天使贷</p>
             <p class="tc f24 g6 mt30">解决燃眉之急</p>
@@ -58,7 +58,7 @@
         </li>
     </ul>
     <h1 id="basis">基础服务</h1>
-    <ul class="serve fix">
+    <ul class="serve fix" id="middle">
         <li>
             <img src="images/creation/serve1.png">
             <p>域名注册</p>
@@ -84,7 +84,7 @@
             <p>著作权申请</p>
         </li>
     </ul>
-    <h1 class="more df jcsb"><span>天使资讯</span><span>更多</span></h1>
+    <h1 class="more df jcsb"><span>天使资讯</span><span id="more">更多</span></h1>
     <ul id="event">
         <li class="df jcsb pl30 pr30 f24 g6"><span>突发大事件来啦！</span><span class="g9">2016.09.08</span></li>
         <li class="df jcsb pl30 pr30 f24 g6"><span>突发大事件来啦！</span><span class="g9">2016.09.08</span></li>
@@ -154,6 +154,51 @@
             });
             touch.on('.bannerSlider', 'swiperight', function(ev){
                 bannerSlider.prev();
+            });
+            $("footer ul").children("li").eq(0).click(function(){
+                window.location.href="homePage.html"
+            });
+            $("footer ul").children("li").eq(1).click(function(){
+                window.location.href="solve.html"
+            });
+            $("footer ul").children("li").eq(2).click(function(){
+                window.location.href="creation.html"
+            });
+            $("footer ul").children("li").eq(3).click(function(){
+                window.location.href="mine.html"
+            });
+            $("#message").click(function(){
+                window.location.href="message.html";
+            });
+            $("#top").children("li").eq(0).click(function(){
+                window.location.href="loan.html";
+            });
+            $("#top").children("li").eq(1).click(function(){
+                window.location.href="investment.html";
+            });
+            $("#top").children("li").eq(2).click(function(){
+                window.location.href="combineInvest.html";
+            });
+            $("#middle").children("li").eq(0).click(function(){
+                window.location.href="domainNameApply.html";
+            });
+            $("#middle").children("li").eq(1).click(function(){
+                window.location.href="cloudServer.html";
+            });
+            $("#middle").children("li").eq(2).click(function(){
+                window.location.href="domainRecord.html";
+            });
+            $("#middle").children("li").eq(3).click(function(){
+                window.location.href="trademark.html";
+            });
+            $("#middle").children("li").eq(4).click(function(){
+                window.location.href="patent.html";
+            });
+            $("#middle").children("li").eq(5).click(function(){
+                window.location.href="book.html";
+            });
+            $("#more").click(function(){
+                window.location.href="trend.html";
             });
         })
     </script>

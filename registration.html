@@ -16,13 +16,13 @@
     <a href="javascript:history.go(-1)"></a>
     注册
 </header>
-<form action="">
+<form action="login.html">
     <div id="first"><input type="text" placeholder="请输入手机号"/></div>
     <div id="second" class="fix"><input type="password" placeholder="请输入验证码"/><span class="r" id="send">发送验证码</span></div>
     <div id="pass"><input type="password" placeholder="请输入密码"/></div>
     <div id="check"><input type="checkbox" id="or" name="or"/><label for="or" class="ml20">阅读并同意<span>《服务协议》</span></span></label></div>
     <div id="third"><input type="submit" value="确认修改"/></div>
-    <div id="have"><input type="button" value="已有账号？去登录"/></div>
+    <div id="have" onclick="window.open('login.html','_self')"><input type="button" value="已有账号？去登录"/></div>
 </form>
 <div id="fifth" class="f24 g9"><span class="mr20"></span>其他账号登录<span class="ml20"></span></div>
 <ul class="df jcc mt30" id="footer">

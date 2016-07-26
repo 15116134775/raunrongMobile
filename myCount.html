@@ -15,7 +15,7 @@
     <header class="tc">
         <a href="javascript:history.go(-1)"></a>
         我的账户
-        <a href="#"></a>
+        <a href="message.html"></a>
     </header>
     <div class="header">
         <p class="f28 pt30 wh">余额账户（元）</p>
@@ -26,5 +26,17 @@
         <li class="fix g6">提现<span class="r"></span></li>
         <li class="fix g6">明细<span class="r"></span></li>
     </ul>
+
+    <script>
+        $("ul").find("li").eq(0).click(function(){
+            window.location.href="rechange.html";
+        });
+        $("ul").find("li").eq(1).click(function(){
+            window.location.href="balance.html";
+        });
+        $("ul").find("li").eq(2).click(function(){
+            window.location.href="countDetail.html";
+        });
+    </script>
 </body>
 </html>

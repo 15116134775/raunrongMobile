@@ -15,7 +15,7 @@
 <body>
     <header class="fix">
         <input type="text"  name="q" id="search" placeholder="请输入文字"/>
-        <img src="images/homePage/ring.png">
+        <img src="images/homePage/ring.png" id="message">
     </header>
     <div class="content">
         <div id="banner_tabs" class="flexslider">
@@ -51,25 +51,25 @@
         <div class="item">
             <ul class="df jcsb">
                 <li>
-                    <a class="df fdc aic">
+                    <a class="df fdc aic" href="companyService.html">
                         <img src="images/homePage/icon1.png" alt="">
                         <span class="f24">企业服务</span>
                     </a>
                 </li>
                 <li>
-                    <a class="df fdc aic">
+                    <a class="df fdc aic" href="weixin.html">
                         <img src="images/homePage/icon2.png" alt="">
                         <span class="f24">微信应用</span>
                     </a>
                 </li>
                 <li>
-                    <a class="df fdc aic">
+                    <a class="df fdc aic" href="developStage.html">
                         <img src="images/homePage/icon3.png" alt="">
                         <span class="f24">平台搭建</span>
                     </a>
                 </li>
                 <li>
-                    <a class="df fdc aic">
+                    <a class="df fdc aic" href="developAPP.html">
                         <img src="images/homePage/icon4.png" alt="">
                         <span class="f24">APP开发</span>
                     </a>
@@ -77,25 +77,25 @@
             </ul>
             <ul class="df jcsb">
                 <li>
-                    <a class="df fdc aic">
+                    <a class="df fdc aic" href="special.html">
                         <img src="images/homePage/icon5.png" alt="">
                         <span class="f24">新奇特色</span>
                     </a>
                 </li>
                 <li>
-                    <a class="df fdc aic">
+                    <a class="df fdc aic" href="tool.html">
                         <img src="images/homePage/icon6.png" alt="">
                         <span class="f24">营销工具</span>
                     </a>
                 </li>
                 <li>
-                    <a class="df fdc aic">
+                    <a class="df fdc aic" href="game.html">
                         <img src="images/homePage/icon7.png" alt="">
                         <span class="f24">娱乐游戏</span>
                     </a>
                 </li>
                 <li>
-                    <a class="df fdc aic">
+                    <a class="df fdc aic"  href="hardware.html">
                         <img src="images/homePage/icon8.png" alt="">
                         <span class="f24">智能硬件</span>
                     </a>
@@ -184,6 +184,24 @@
                     list+=li;
                 }
                $("#product").html(list);
+            });
+            $("footer ul").children("li").eq(0).click(function(){
+                window.location.href="homePage.html"
+            });
+            $("footer ul").children("li").eq(1).click(function(){
+                window.location.href="solve.html"
+            });
+            $("footer ul").children("li").eq(2).click(function(){
+                window.location.href="creation.html"
+            });
+            $("footer ul").children("li").eq(3).click(function(){
+                window.location.href="mine.html"
+            });
+            $("#product").delegate("li","click",function(){
+                window.location.href="product.html";
+            });
+            $("#message").click(function(){
+                window.location.href="message.html";
             });
         })
     </script>

@@ -15,7 +15,7 @@
 <body>
     <header class="fix">
         <input type="text"  name="q" id="search" placeholder="请输入文字"/>
-        <img src="images/homePage/ring.png">
+        <img src="images/homePage/ring.png" id="message">
     </header>
     <ul id="content1" class="content">
         <!--<li>-->
@@ -76,6 +76,24 @@
         });
         $(".more").click(function(){
             $("#content2").show();
+        });
+        $("footer ul").children("li").eq(0).click(function(){
+            window.location.href="homePage.html"
+        });
+        $("footer ul").children("li").eq(1).click(function(){
+            window.location.href="solve.html"
+        });
+        $("footer ul").children("li").eq(2).click(function(){
+            window.location.href="creation.html"
+        });
+        $("footer ul").children("li").eq(3).click(function(){
+            window.location.href="mine.html"
+        });
+        $("#message").click(function(){
+            window.location.href="message.html";
+        });
+        $(".content").delegate("li","click",function(){
+            window.location.href="solveDetail.html";
         });
     });
 </script>

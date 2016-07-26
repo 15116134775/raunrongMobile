@@ -15,7 +15,7 @@
     <header class="tc">
         <a href="javascript:history.go(-1)"></a>
         域名注册
-        <a href="#"></a>
+        <a href="message.html"></a>
     </header>
     <form action="" method="get">
         <input type="text" name="search" id="search" placeholder="请输入您所需要的域名"/>
@@ -40,5 +40,12 @@
             <button>申请</button>
         </li>
     </ul>
+
+
+    <script>
+        $("ul").children("li").find("button").click(function(){
+            window.location.href="domainNameApply.html";
+        });
+    </script>
 </body>
 </html>

@@ -38,12 +38,20 @@
     <header class="tc">
         <a href="javascript:history.go(-1)"></a>
         产品
-        <a href="#"></a>
+        <a href="message.html"></a>
     </header>
     <ul>
-        <li class="pl30 pr30 lh100 f30 g6">购买</li>
-        <li class="pl30 pr30 lh100 f30 g6">定制</li>
+        <li class="pl30 pr30 lh100 f30 g6" id="buy">购买</li>
+        <li class="pl30 pr30 lh100 f30 g6" id="ding">定制</li>
     </ul>
-    <div id="button">退出登录</div>
+
+    <script>
+        $("#buy").click(function(){
+            window.location.href="companyService.html";
+        });
+        $("#ding").click(function(){
+            window.location.href="customization.html";
+        });
+    </script>
 </body>
 </html>

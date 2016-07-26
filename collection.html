@@ -13,9 +13,9 @@
 </head>
 <body>
     <header class="tc">
-        <a href="#"></a>
+        <a href="javascript:history.go(-1)"></a>
         我的收藏
-        <a href="#"></a>
+        <a href="message.html"></a>
     </header>
     <nav>
          <div class="active">近一月内收藏</div>
@@ -45,6 +45,9 @@
         }
         }
         $("#content").html(list);
+        });
+        $("#content").delegate("li","click",function(){
+            window.location.href="product.html";
         });
     </script>
 </body>
